@@ -10,9 +10,9 @@ describe "user can visit the welcome page" do
 
   scenario "and click on 'Find Nearest Station', which takes them to '/search'" do
     visit '/'
-      select 'Griffin Coffee', from: :location
-      click_button 'Find Nearest Station'
-      expect(current_path).to eq('/search')
+    select 'Griffin Coffee', from: :location
+    click_button 'Find Nearest Station'
+    expect(current_path).to eq('/search')
   end
 
 end
