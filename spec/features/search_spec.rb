@@ -10,7 +10,7 @@ describe 'search results page' do
     describe 'displays' do
         it 'station name, address, fuel type, and access times' do
             expect(page).to have_content('Target T2225')
-            expect(page).to have_content('1985 Sheridan Blvd')
+            expect(page).to have_content('1985 Sheridan Blvd, Edgewater CO 80214')
             expect(page).to have_content('ELEC')
             expect(page).to have_content('24 hours daily')
         end
