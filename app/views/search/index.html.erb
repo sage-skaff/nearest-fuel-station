@@ -1,0 +1,18 @@
+<h1>Nearest Station</h1>
+<ul>
+    <li><h3><%= @station.name %></h3></li>
+    <li>Address: <%= @station.full_address%></li>
+    <li>Fuel Type: <%= @station.fuel_type %></li>
+    <li>Access Time: <%= @station.access_times %></li>
+<ul>
+
+<h3>Directions</h3>
+<p>Distance: <%= @map.distance%></p>
+<p>Travel Time: <%= @map.travel_time%></p>
+<ul>
+    <% @map.instructions.each do |l|%>
+        <% l.each do |m| %>
+        <li><%= m %></li>
+        <% end %>
+    <% end %>
+</ul>

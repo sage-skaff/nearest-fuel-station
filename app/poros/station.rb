@@ -5,7 +5,8 @@ class Station
                 :zip,
                 :full_address,
                 :fuel_type,
-                :access_times
+                :access_times,
+                :name
 
     def initialize(data)
         @city = data[:fuel_stations][0][:city]
@@ -15,6 +16,7 @@ class Station
         @full_address = full_address
         @fuel_type = data[:fuel_stations][0][:fuel_type_code]
         @access_times = data[:fuel_stations][0][:access_days_time]
+        @name = data[:fuel_stations][0][:station_name]
     end
 
     def full_address
